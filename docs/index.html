@@ -1,0 +1,211 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>practica-8</title>
+	<meta name="description" content="Documentation for practica-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">practica-8</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>practica-8</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#práctica-8-aplicación-de-procesamiento-de-notas-de-texto" id="práctica-8-aplicación-de-procesamiento-de-notas-de-texto" style="color: inherit; text-decoration: none;">
+					<h1>Práctica 8: Aplicación de procesamiento de notas de texto</h1>
+				</a>
+				<p><a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd/actions/workflows/node.js.yml"><img src="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd/actions/workflows/node.js.yml/badge.svg?branch=master" alt="Test"></a>
+					<a href="https://sonarcloud.io/dashboard?id=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd"><img src="https://sonarcloud.io/api/project_badges/measure?project=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd&metric=alert_status" alt="Quality Gate Status"></a>
+				<a href="https://sonarcloud.io/dashboard?id=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd"><img src="https://sonarcloud.io/api/project_badges/measure?project=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd&metric=coverage" alt="Coverage"></a></p>
+				<a href="#introducción" id="introducción" style="color: inherit; text-decoration: none;">
+					<h1>Introducción</h1>
+				</a>
+				<p>En esta primera práctica del segundo bloque de la asignatura, se ha solicitado la implementación de una aplicación de procesamiento de notas de texto, las cuales se puedan añadir modificar, eliminar, listar y leer de un usuario concreto.<br>Estos ficheros de notas serán almacenados como ficheros JSON dentro de cada uno de los usuarios.  </p>
+				<a href="#material-usado" id="material-usado" style="color: inherit; text-decoration: none;">
+					<h1>Material usado</h1>
+				</a>
+				<ul>
+					<li>GitHub Actions<ul>
+							<li><a href="https://sonarcloud.io/dashboard?id=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd">Coveralls</a></li>
+							<li><a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd/actions/workflows/node.js.yml">Test</a></li>
+							<li><a href="https://sonarcloud.io/dashboard?id=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd">SonarCloud</a></li>
+						</ul>
+					</li>
+					<li><a href="https://nodejs.org/dist/latest-v15.x/docs/api/fs.html#fs_synchronous_api">API síncrona proporcinada por Node.js</a></li>
+					<li><a href="https://www.npmjs.com/package/yargs">yargs</a>: <ul>
+							<li><code>npm install yargs</code></li>
+							<li><code>npm --save-dev @types/yargs</code><ul>
+									<li>Herramienta que permite parsear diferentes argumentos pasados a un programa desde la línea de comandos.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="https://www.npmjs.com/package/chalk">chalk</a>]:<ul>
+							<li><code>npm i chalk</code></li>
+							<li><code>npm --save-dev @types/chalk</code><ul>
+									<li>Herramienta que permite dar color a la salida por pantalla</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#requerimientos-y-funcionalidades-de-la-aplicación" id="requerimientos-y-funcionalidades-de-la-aplicación" style="color: inherit; text-decoration: none;">
+					<h1>Requerimientos y Funcionalidades de la aplicación</h1>
+				</a>
+				<p>Esta aplicación tiene una serie de requerimientos los cuales se deben cumplir:
+				<strong>1. La aplicación de notas deberá permitir que múltiples usuarios interactúen con ella, pero no simultáneamente.</strong><br>Para cumplir con este primer requisito se ha implementado el patrón creacional <strong>Singleton</strong> este permite instanciar una clase una única vez esta clase se le ha llamado <code>NoteInstance</code>, permitiendo de esta manera controlar el acceso a las notas de manera múltiple pero sin simultaniedad ya que no permite sino úna única instancia y esta es global.</p>
+				<p><strong>2. Una nota estará formada, como mínimo, por un título, un cuerpo y un color (rojo, verde, azul o amarillo).</strong><br>Para cumplir con este requisito se ha decidido implementar un tipo de dato llamado <code>nota</code> que contendra cada uno de los atributos necesarios para formar una nota:  </p>
+				<pre><code class="language-typescript"><span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">note</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">  </span><span style="color: #001080">user</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">title</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">body</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">color</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">,</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<p><strong>3. Cada usuario tendrá su propia lista de notas, con la que podrá llevar a cabo las siguientes operaciones:</strong></p>
+				<ul>
+					<li><p><strong>Estructura Final de la &#39;Base de datos de notas&#39;</strong><br><img src="media/EstructuraNotes.png" alt="Estructura">  </p>
+					</li>
+					<li><p><strong>Añadir Notas a la base de datos</strong><br>Para permitir que cada usuario tenga su propia lista de notas, y sea capaz de almacenar las notas que quiera en dicha lista, para ello se ha implementado la función <code>addNotes(nota: note)</code>, este método de la clase <code>NoteInstance</code> tiene como función principal el añadir una <code>nota: note</code> a un determinado usuario, para ello lo primero que realiza es comprobar si existe ya un directorio con su nombre mediante <code>fs.existsSync(&#39;./Notes/${nota.user}/&#39;)</code>, si existe, entonces comprobamos si ya existe una nota con el mismo título, si existe mostramos por pantalla que la nota ya existe, mientras que si no existe la añadimos mediante <code>fs.writeFileSync(ruta, data);</code> donde ruta es la ruta donde añadir la nota, y data es el contenido en formato JSON para escribirlo dentro de la nota. En el caso de que no existe el directorio con su nombre también se crea dicho directorio para posteriormente hacer el <code>fs.writeFileSync(ruta, data);</code>.</p>
+						<p>Para el funcionamiento de dicho método, se ha gestionado mediante el uso de <code>yargs</code>, el cual nos permite parsear varios argumentos pasados a un a programa desde la línea de comandos. Para ello en el fichero <a href="./src/app.ts">app.ts</a> se ha desarrollado la configuración del comando <code>add</code> al que le tenemos que pasar una serie de parámetros, en este caso del add se debe pasar todos los parámetros necesarios para formar una nota (User, Title, Body, Color).
+						Por lo que para hacer uso de las notas solo se podrá interactuar con ellas mediante línea de comandos, un ejemplo de uso del comando add es el siguiente:</p>
+						<pre><code class="language-bash"><span style="color: #000000">node dist/app.js add --user=</span><span style="color: #A31515">&quot;Sergio&quot;</span><span style="color: #000000"> --title=</span><span style="color: #A31515">&quot;Yellow note&quot;</span><span style="color: #000000"> --body=</span><span style="color: #A31515">&quot;This is a yellow note&quot;</span><span style="color: #000000"> --color=</span><span style="color: #A31515">&quot;Yellow&quot;</span>
+</code></pre>
+					</li>
+					<li><p><strong>Modificar una nota de la lista</strong><br>Para permitir la modificación de una nota, el primer requisito es que esta exista, por ello lo primero es comprobar si existe la nota mediante <code>fs.existSync</code>, si este existe se procede a realizar la modificación.<br>La modificación implementada en este caso fue la de renombrar la nota, para ello se hace uso de <code>fs.renameSync(oldname, newname)</code>.  </p>
+						<p>Para la puesta en funcionamiento de este método se ha realizado también mediante <code>yargs</code> el comando <code>modify</code> al cual se debe pasar como parámetros el usuario, nombre del fichero a modificar y el nuevo nombre. Un ejemplo de como debe ser ejecutado el comando es el siguiente:</p>
+						<pre><code class="language-bash"><span style="color: #000000">node dist/app.js modify --user=</span><span style="color: #A31515">&quot;Sergio&quot;</span><span style="color: #000000"> --title=</span><span style="color: #A31515">&quot;Yellow note&quot;</span><span style="color: #000000"> --newtitle=</span><span style="color: #A31515">&quot;New Name&quot;</span>
+</code></pre>
+					</li>
+					<li><p><strong>Eliminar una nota de la lista</strong>
+						En este requisito se solicita que un usuario pueda eliminar una determinada nota, para ello igual que con los requisitos anteriores se debe comprobar si existe y si es así hacer uso de <code> fs.rmSync(ruta);</code> donde la ruta será la ruta de la nota a eliminar.  </p>
+						<p>Para la puesta en funcionamiento, se ha configurado el comando <code>remove</code> este recibe como parámetros el usuario y el título de la nota a eliminar, y un ejemplo de uso sería el siguiente: </p>
+						<pre><code class="language-bash"><span style="color: #000000">node dist/app.js remove --user=</span><span style="color: #A31515">&quot;Sergio&quot;</span><span style="color: #000000"> --title=</span><span style="color: #A31515">&quot;Yellow note&quot;</span>
+</code></pre>
+					</li>
+					<li><p><strong>Listar los títulos de las notas de la lista</strong>
+						Este requisito solicita mostrar el título de cada una de las notas que tiene un determinado usuario. Para ello se comprueba si el usuario tiene asociado un directorio, pues en caso de que no lo tuviera no habría título que mostrar. En el caso de que si existiéra leemos cada uno de los ficheros que tiene el usuario mediante <code>fs.readdirSync(ruta)</code>, con esto obtendremos los nombres de cada uno de los documentos (JSON) que tienen notas por lo que recorremos cada uno de los documentos mediante <code>fs.readFileSync(ruta + note);</code> y mostrando por pantalla los títulos, además obtener el color con el que se mostrará dicho título, para mas tarde hacer uso de la función <code>colorsPrint(color: string, text:string)</code>, para mediante el uso de <code>chalk</code> mostrar dicho título del color que hemos sacado del JSON de una nota determinada.</p>
+						<p>Al igual que los anteriores se ha desarrollado el comando <code>list</code> mediante <code>yargs</code>, de forma que se debe pasar a dicho comando el usuario del que queremos mostrar sus títulos. Un ejemplo de uso sería el siguiente:  </p>
+						<pre><code class="language-bash"><span style="color: #000000">node dist/app.js list --user=</span><span style="color: #A31515">&quot;Sergio&quot;</span>
+</code></pre>
+					</li>
+					<li><p><strong>Leer una nota concreta de la lista</strong><br>Este requisito es similar al anterior pero en este caso debemos de mostrar el título y el cuerpo de una determinada nota. Para ello igual que antes comprobamos que el directorio del usuario existe, y que existe la nota con un título determinado, y si es así mediante el uso de <code>fs.readFileSync(ruta)</code> leemos el contenido de dicha nota y lo almacenamos en una variable llamada <code>text</code> para posteriormente convertirla a un objeto mediante <code>JSON.parse(text.toString());</code> cuyo contenido a su vez es almacenado en la variable <code>titleBody</code> desde la cuál ya podemos acceder al título y cuerpo de dicha nota en formado <code>JSON</code>. Para acceder a dicho cuerpo basta con hacer <code>titleBody.body</code> pudiendo así acceder y mostrar dicho cuerpo de la nota, además del resto de atributos como título y color el cual se necesita para pasarlo al método <code>colorsprint(titleBody.color, titleBody.body)</code> permitiendo de esta manera imprimir por pantalla el cuerpo de la nota en un determinado color.  </p>
+						<p>En este caso el comando se llamado <code>read</code>y recibe como parámetros el nombre del usuario <code>--user</code> y el nombre de la nota a leer <code>--title</code>. Un ejemplo de uso sería el siguiente: </p>
+						<pre><code class="language-bash"><span style="color: #000000">node dist/app.js </span><span style="color: #795E26">read</span><span style="color: #000000"> --user=</span><span style="color: #A31515">&quot;Sergio&quot;</span><span style="color: #000000"> --title=</span><span style="color: #A31515">&quot;Yellow note&quot;</span>
+</code></pre>
+					</li>
+				</ul>
+				<p><strong>4. Todos los mensajes informativos se mostrarán con color verde, mientras que los mensajes de error se mostrarán con color rojo.</strong><br>Para cumplir con este requisito se han definido dos constantes globales, haciendo uso de <code>chalk</code>.</p>
+				<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">error</span><span style="color: #000000"> = </span><span style="color: #001080">chalk</span><span style="color: #000000">.</span><span style="color: #001080">bold</span><span style="color: #000000">.</span><span style="color: #001080">red</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">informative</span><span style="color: #000000"> = </span><span style="color: #001080">chalk</span><span style="color: #000000">.</span><span style="color: #001080">bold</span><span style="color: #000000">.</span><span style="color: #001080">green</span><span style="color: #000000">;</span>
+</code></pre>
+				<p>Mediante chalk establecemos que la constante <code>error</code> y <code>informative</code> deben usarse de la siguiente manera para establecer el color de la salida por pantalla.</p>
+				<pre><code class="language-typescript"><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">error</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Note title taken!&#039;</span><span style="color: #000000">)); </span><span style="color: #008000">// Muestra el mensaje en negrita y roja</span>
+<span style="color: #000000"> </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">informative</span><span style="color: #000000">(</span><span style="color: #A31515">`New note added in </span><span style="color: #0000FF">${</span><span style="color: #001080">user</span><span style="color: #0000FF">}</span><span style="color: #A31515">!`</span><span style="color: #000000">)); </span><span style="color: #008000">// Muestra el mensaje en negrita y verde</span>
+</code></pre>
+				<a href="#ejemplo-de-uso-de-la-aplicación" id="ejemplo-de-uso-de-la-aplicación" style="color: inherit; text-decoration: none;">
+					<h1>Ejemplo de uso de la aplicación</h1>
+				</a>
+				<p><img src="media/EjemploUso.png" alt="Ejemplo uso">  </p>
+				<a href="#bibliografía" id="bibliografía" style="color: inherit; text-decoration: none;">
+					<h1>Bibliografía</h1>
+				</a>
+				<ul>
+					<li><a href="https://sonarcloud.io/projects">Sonar Cloud</a></li>
+					<li><a href="https://nodejs.org/es/">Node.js</a></li>
+					<li><a href="https://nodejs.org/dist/latest-v16.x/docs/api/fs.html">File system Node.js</a></li>
+					<li><a href="https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-patterns.html#singleton">Apuntes patrones de diseño</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Modules</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/app.html">app</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/note.html">note</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/types.html">types</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
