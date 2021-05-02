@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>practica-8</title>
-	<meta name="description" content="Documentation for practica-8">
+	<title>practica-9</title>
+	<meta name="description" content="Documentation for practica-9">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script async src="assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">practica-8</a>
+					<a href="index.html" class="title">practica-9</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -50,7 +50,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<h1>practica-8</h1>
+			<h1>practica-9</h1>
 		</div>
 	</div>
 </header>
@@ -61,7 +61,7 @@
 				<a href="#práctica-8-aplicación-de-procesamiento-de-notas-de-texto" id="práctica-8-aplicación-de-procesamiento-de-notas-de-texto" style="color: inherit; text-decoration: none;">
 					<h1>Práctica 8: Aplicación de procesamiento de notas de texto</h1>
 				</a>
-				<p><a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd/actions/workflows/node.js.yml"><img src="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd/actions/workflows/node.js.yml/badge.svg?branch=master" alt="Test"></a>
+				<p><a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-sergiolbd/actions/workflows/node.js.yml"><img src="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-sergiolbd/actions/workflows/node.js.yml/badge.svg?branch=master" alt="Test"></a>
 					<a href="https://sonarcloud.io/dashboard?id=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd"><img src="https://sonarcloud.io/api/project_badges/measure?project=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd&metric=alert_status" alt="Quality Gate Status"></a>
 				<a href="https://sonarcloud.io/dashboard?id=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd"><img src="https://sonarcloud.io/api/project_badges/measure?project=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd&metric=coverage" alt="Coverage"></a></p>
 				<a href="#introducción" id="introducción" style="color: inherit; text-decoration: none;">
@@ -72,96 +72,124 @@
 					<h1>Material usado</h1>
 				</a>
 				<ul>
-					<li>GitHub Actions<ul>
-							<li><a href="https://sonarcloud.io/dashboard?id=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd">Coveralls</a></li>
-							<li><a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd/actions/workflows/node.js.yml">Test</a></li>
-							<li><a href="https://sonarcloud.io/dashboard?id=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-sergiolbd">SonarCloud</a></li>
-						</ul>
+					<li><a href="https://nodejs.org/dist/latest/docs/api/fs.html#fs_callback_api">Api de callbacks FyleSystem</a></li>
+					<li><a href="https://nodejs.org/dist/latest/docs/api/child_processhtml#child_process_asynchronous_process_creation">API asíncrona proporcinada por Node.js para crear procesos</a></li>
+				</ul>
+				<a href="#ejercicios" id="ejercicios" style="color: inherit; text-decoration: none;">
+					<h1><a href="src/">Ejercicios</a></h1>
+				</a>
+				<a href="#ejercicio-1" id="ejercicio-1" style="color: inherit; text-decoration: none;">
+					<h2><a href="src/ejercicio1.ts">Ejercicio 1</a></h2>
+				</a>
+				<p>  En este primer ejercicio se pide realizar una traza de ejecución de un pequeño programa, en dicha traza deberá aparecer el siguiente contenido:  </p>
+				<ul>
+					<li><p><strong>Pila de llamada o Call Stack</strong></p>
 					</li>
-					<li><a href="https://nodejs.org/dist/latest-v15.x/docs/api/fs.html#fs_synchronous_api">API síncrona proporcinada por Node.js</a></li>
-					<li><a href="https://www.npmjs.com/package/yargs">yargs</a>: <ul>
-							<li><code>npm install yargs</code></li>
-							<li><code>npm --save-dev @types/yargs</code><ul>
-									<li>Herramienta que permite parsear diferentes argumentos pasados a un programa desde la línea de comandos.</li>
-								</ul>
-							</li>
-						</ul>
+					<li><p><strong>Registro de eventos de la API o Node.js API</strong></p>
 					</li>
-					<li><a href="https://www.npmjs.com/package/chalk">chalk</a>]:<ul>
-							<li><code>npm i chalk</code></li>
-							<li><code>npm --save-dev @types/chalk</code><ul>
-									<li>Herramienta que permite dar color a la salida por pantalla</li>
+					<li><p><strong>Cola de manejadores de Node.js o Callback queue</strong></p>
+					</li>
+					<li><p><strong>Consola</strong>
+							Tras realizar dicha traza el resultado es el siguiente:
+							<img src="media/ejercicio1-1.png" alt="ejercicio1-1">
+							<img src="media/ejercicio1-2.png" alt="ejercicio1-2">
+							<img src="media/ejercicio1-3.png" alt="ejercicio1-3">
+						<img src="media/ejercicio1-4.png" alt="ejercicio1-4"></p>
+					</li>
+					<li><p>Función <strong>access(path, mode, callback)</strong>:<br>Esta función se encarga de comprobar los permisos de un usuario para el archivo o directorio especificado por <code>path</code>.
+						Si se hace referencia a <code>access</code> usado en el código a realizar la traza, la función de dicho <code>access</code> es la de comprobar si el archivo pasado por parámetros existe en el directorio actual y si además se puede escribir en él.</p>
+						<pre><code class="language-typescript"><span style="color: #008000">/**</span>
+<span style="color: #008000">* Comprueba si el fichero existe en el directorio actual, y si si se puede escribir en el</span>
+<span style="color: #008000">* </span><span style="color: #0000FF">@param</span><span style="color: #008000"> </span><span style="color: #267F99">{string}</span><span style="color: #008000"> </span><span style="color: #001080">filename</span><span style="color: #008000"> nombre del fichero </span>
+<span style="color: #008000">* </span><span style="color: #0000FF">@param</span><span style="color: #008000"> </span><span style="color: #267F99">{number}</span><span style="color: #008000"> </span><span style="color: #001080">constants.F_OK</span><span style="color: #008000"> Entero opcional que especifica las comprobaciones de accesibilidad a realizar</span>
+<span style="color: #008000">* </span><span style="color: #0000FF">@function</span><span style="color: #008000"> </span><span style="color: #267F99">(err)=&gt;</span><span style="color: #008000"> Función callback que se invoca con un posible argumento de error</span>
+<span style="color: #008000">*/</span>
+<span style="color: #795E26">access</span><span style="color: #000000">(</span><span style="color: #001080">filename</span><span style="color: #000000">, </span><span style="color: #001080">constants</span><span style="color: #000000">.</span><span style="color: #0070C1">F_OK</span><span style="color: #000000">, (</span><span style="color: #001080">err</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+</code></pre>
+					</li>
+					<li><p>Objeto <strong>constants</strong>:<br>Este objeto devolverá un objeto que contiene constantes de uso común para las operaciones del sistema de archivos.
+						Es decir es un objeto mediante el cual se pueden obtener otras constantes para realizar determinadas comprobaciones sobre archivos, como se realiza en el código con <code>constants.F_OK</code> cuya constante es una bandera que indica que el archivo es visible para el proceso de llamada es decir para un <code>access</code> por ejemplo comprobando asi si existe dicho archivo.</p>
+						<ul>
+							<li>Tipos de constantes: <ul>
+									<li>Acceso a archivos</li>
+									<li>Copia de archivos</li>
+									<li>Apertura de archivos</li>
+									<li>Tipo de archivo</li>
+									<li>Modo de archivo</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
 				</ul>
-				<a href="#requerimientos-y-funcionalidades-de-la-aplicación" id="requerimientos-y-funcionalidades-de-la-aplicación" style="color: inherit; text-decoration: none;">
-					<h1>Requerimientos y Funcionalidades de la aplicación</h1>
+				<a href="#ejercicio-2" id="ejercicio-2" style="color: inherit; text-decoration: none;">
+					<h2><a href="src/ejercicio2/">Ejercicio 2</a></h2>
 				</a>
-				<p>Esta aplicación tiene una serie de requerimientos los cuales se deben cumplir:
-				<strong>1. La aplicación de notas deberá permitir que múltiples usuarios interactúen con ella, pero no simultáneamente.</strong><br>Para cumplir con este primer requisito se ha implementado el patrón creacional <strong>Singleton</strong> este permite instanciar una clase una única vez esta clase se le ha llamado <code>NoteInstance</code>, permitiendo de esta manera controlar el acceso a las notas de manera múltiple pero sin simultaniedad ya que no permite sino úna única instancia y esta es global.</p>
-				<p><strong>2. Una nota estará formada, como mínimo, por un título, un cuerpo y un color (rojo, verde, azul o amarillo).</strong><br>Para cumplir con este requisito se ha decidido implementar un tipo de dato llamado <code>nota</code> que contendra cada uno de los atributos necesarios para formar una nota:  </p>
-				<pre><code class="language-typescript"><span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">note</span><span style="color: #000000"> = {</span>
-<span style="color: #000000">  </span><span style="color: #001080">user</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">,</span>
-<span style="color: #000000">  </span><span style="color: #001080">title</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">,</span>
-<span style="color: #000000">  </span><span style="color: #001080">body</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">,</span>
-<span style="color: #000000">  </span><span style="color: #001080">color</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">,</span>
-<span style="color: #000000">}</span>
-</code></pre>
-				<p><strong>3. Cada usuario tendrá su propia lista de notas, con la que podrá llevar a cabo las siguientes operaciones:</strong></p>
+				<p>  En este segundo ejercicio se solicita escribir una aplicación encargada de mostrar información sobre el número de líneas, palabras o caracteres que tendrá un fichero de texto.<br>  Para ello se han creado dos funciones, pues se solicitaba que dicho ejercicio se realizara de dos maneras diferentes, y estas maneras son las siguientes:   </p>
+				<p>  <strong>1. Haciendo uso del método pipe de un Stream para poder redirigir la salida de un comando hacia otro.</strong><br>  Para ello se ha desarrollado la función <code>mode1(filename: string, option: string)</code> la cual recibe como parámetros el nombre del fichero a analizar y las opciones, estas opciones son: <code>line</code>, <code>words</code>, <code>characters</code> o <code>combination</code> y dependiendo de la introducida por linea comandos se mostrará una información u otra.<br>  En cuanto el desarrollo de la función primero se ha comprobado que dicho fichero se puede existe y se puede leer mediante <code>access(filename, constants.R_OK, (err) =&gt; { ... } </code>, y en el caso de que no se produzca ningún error se crea un proceso adicional que ejecuta el comando <code>wc helloworld.txt</code> haciendo uso de la función <code>spawn</code>, esta a su vez devuelve un objeto <code>childProcess</code>. Tras ello se lee el contenido del stream obtenido y se almacena en la variable <code>wcOutput</code>, para por último añadir un manejador ejecutado sobre el objeto wc, que se ejecuta cuando wc emite el evento <code>close</code>. Haciendo uso de este manejador se muestra por consola las estadísticas del fichero, redirigiendo la salida estadar de wc obtenida a la salida del comando <code>echo</code> encargado de la salida por consola de la información obtenida mediante <code>wc helloworld.txt</code>.  </p>
+				<p>  <strong>2. Sin hacer uso del método pipe, solamente creando los subprocesos necesarios y registrando manejadores a aquellos eventos necesarios para implementar la funcionalidad solicitada.</strong><br>  En este segundo modo se ha procedido de manera similar al caso anterior pero sin hacer uso de <code>pipe</code> para redirigir la salida del <code>wc</code> al <code>echo</code>, en este caso simplemente mediante la creación de subprocesos se ha comprobado que el fichero es accesible y se puede leer, se ha ejecutado el comando mediante <code>spawn</code>, se ha almacenado el contenido en la variable <code>wcOutput</code> para finalmente mostrar por consola mediante un <code>console.log(...)</code> la información seleccionada mediante la <code>option</code> </p>
+				<p>Además se ha hecho uso de <code>yargs</code> para pasar los parametros necesarios por línea comandos, los parametros a indicar son los siguientes: </p>
 				<ul>
-					<li><p><strong>Estructura Final de la &#39;Base de datos de notas&#39;</strong><br><img src="media/EstructuraNotes.png" alt="Estructura">  </p>
+					<li><p>--ruta=&quot;nombre fichero&quot;</p>
 					</li>
-					<li><p><strong>Añadir Notas a la base de datos</strong><br>Para permitir que cada usuario tenga su propia lista de notas, y sea capaz de almacenar las notas que quiera en dicha lista, para ello se ha implementado la función <code>addNotes(nota: note)</code>, este método de la clase <code>NoteInstance</code> tiene como función principal el añadir una <code>nota: note</code> a un determinado usuario, para ello lo primero que realiza es comprobar si existe ya un directorio con su nombre mediante <code>fs.existsSync(&#39;./Notes/${nota.user}/&#39;)</code>, si existe, entonces comprobamos si ya existe una nota con el mismo título, si existe mostramos por pantalla que la nota ya existe, mientras que si no existe la añadimos mediante <code>fs.writeFileSync(ruta, data);</code> donde ruta es la ruta donde añadir la nota, y data es el contenido en formato JSON para escribirlo dentro de la nota. En el caso de que no existe el directorio con su nombre también se crea dicho directorio para posteriormente hacer el <code>fs.writeFileSync(ruta, data);</code>.</p>
-						<p>Para el funcionamiento de dicho método, se ha gestionado mediante el uso de <code>yargs</code>, el cual nos permite parsear varios argumentos pasados a un a programa desde la línea de comandos. Para ello en el fichero <a href="./src/app.ts">app.ts</a> se ha desarrollado la configuración del comando <code>add</code> al que le tenemos que pasar una serie de parámetros, en este caso del add se debe pasar todos los parámetros necesarios para formar una nota (User, Title, Body, Color).
-						Por lo que para hacer uso de las notas solo se podrá interactuar con ellas mediante línea de comandos, un ejemplo de uso del comando add es el siguiente:</p>
-						<pre><code class="language-bash"><span style="color: #000000">node dist/app.js add --user=</span><span style="color: #A31515">&quot;Sergio&quot;</span><span style="color: #000000"> --title=</span><span style="color: #A31515">&quot;Yellow note&quot;</span><span style="color: #000000"> --body=</span><span style="color: #A31515">&quot;This is a yellow note&quot;</span><span style="color: #000000"> --color=</span><span style="color: #A31515">&quot;Yellow&quot;</span>
-</code></pre>
+					<li><p>--mode=&quot;1 o 2&quot; --&gt; Hace referencia al modo de ejecución seleccionado si con pipe (1) o sin pipe (2)</p>
 					</li>
-					<li><p><strong>Modificar una nota de la lista</strong><br>Para permitir la modificación de una nota, el primer requisito es que esta exista, por ello lo primero es comprobar si existe la nota mediante <code>fs.existSync</code>, si este existe se procede a realizar la modificación.<br>La modificación implementada en este caso fue la de renombrar la nota, para ello se hace uso de <code>fs.renameSync(oldname, newname)</code>.  </p>
-						<p>Para la puesta en funcionamiento de este método se ha realizado también mediante <code>yargs</code> el comando <code>modify</code> al cual se debe pasar como parámetros el usuario, nombre del fichero a modificar y el nuevo nombre. Un ejemplo de como debe ser ejecutado el comando es el siguiente:</p>
-						<pre><code class="language-bash"><span style="color: #000000">node dist/app.js modify --user=</span><span style="color: #A31515">&quot;Sergio&quot;</span><span style="color: #000000"> --title=</span><span style="color: #A31515">&quot;Yellow note&quot;</span><span style="color: #000000"> --newtitle=</span><span style="color: #A31515">&quot;New Name&quot;</span>
-</code></pre>
+					<li><p>--option=&quot;line, words o characters&quot; o por defecto se ha configurado la opción de que se muestre una combinación de las tres opciones. </p>
 					</li>
-					<li><p><strong>Eliminar una nota de la lista</strong>
-						En este requisito se solicita que un usuario pueda eliminar una determinada nota, para ello igual que con los requisitos anteriores se debe comprobar si existe y si es así hacer uso de <code> fs.rmSync(ruta);</code> donde la ruta será la ruta de la nota a eliminar.  </p>
-						<p>Para la puesta en funcionamiento, se ha configurado el comando <code>remove</code> este recibe como parámetros el usuario y el título de la nota a eliminar, y un ejemplo de uso sería el siguiente: </p>
-						<pre><code class="language-bash"><span style="color: #000000">node dist/app.js remove --user=</span><span style="color: #A31515">&quot;Sergio&quot;</span><span style="color: #000000"> --title=</span><span style="color: #A31515">&quot;Yellow note&quot;</span>
-</code></pre>
-					</li>
-					<li><p><strong>Listar los títulos de las notas de la lista</strong>
-						Este requisito solicita mostrar el título de cada una de las notas que tiene un determinado usuario. Para ello se comprueba si el usuario tiene asociado un directorio, pues en caso de que no lo tuviera no habría título que mostrar. En el caso de que si existiéra leemos cada uno de los ficheros que tiene el usuario mediante <code>fs.readdirSync(ruta)</code>, con esto obtendremos los nombres de cada uno de los documentos (JSON) que tienen notas por lo que recorremos cada uno de los documentos mediante <code>fs.readFileSync(ruta + note);</code> y mostrando por pantalla los títulos, además obtener el color con el que se mostrará dicho título, para mas tarde hacer uso de la función <code>colorsPrint(color: string, text:string)</code>, para mediante el uso de <code>chalk</code> mostrar dicho título del color que hemos sacado del JSON de una nota determinada.</p>
-						<p>Al igual que los anteriores se ha desarrollado el comando <code>list</code> mediante <code>yargs</code>, de forma que se debe pasar a dicho comando el usuario del que queremos mostrar sus títulos. Un ejemplo de uso sería el siguiente:  </p>
-						<pre><code class="language-bash"><span style="color: #000000">node dist/app.js list --user=</span><span style="color: #A31515">&quot;Sergio&quot;</span>
-</code></pre>
-					</li>
-					<li><p><strong>Leer una nota concreta de la lista</strong><br>Este requisito es similar al anterior pero en este caso debemos de mostrar el título y el cuerpo de una determinada nota. Para ello igual que antes comprobamos que el directorio del usuario existe, y que existe la nota con un título determinado, y si es así mediante el uso de <code>fs.readFileSync(ruta)</code> leemos el contenido de dicha nota y lo almacenamos en una variable llamada <code>text</code> para posteriormente convertirla a un objeto mediante <code>JSON.parse(text.toString());</code> cuyo contenido a su vez es almacenado en la variable <code>titleBody</code> desde la cuál ya podemos acceder al título y cuerpo de dicha nota en formado <code>JSON</code>. Para acceder a dicho cuerpo basta con hacer <code>titleBody.body</code> pudiendo así acceder y mostrar dicho cuerpo de la nota, además del resto de atributos como título y color el cual se necesita para pasarlo al método <code>colorsprint(titleBody.color, titleBody.body)</code> permitiendo de esta manera imprimir por pantalla el cuerpo de la nota en un determinado color.  </p>
-						<p>En este caso el comando se llamado <code>read</code>y recibe como parámetros el nombre del usuario <code>--user</code> y el nombre de la nota a leer <code>--title</code>. Un ejemplo de uso sería el siguiente: </p>
-						<pre><code class="language-bash"><span style="color: #000000">node dist/app.js </span><span style="color: #795E26">read</span><span style="color: #000000"> --user=</span><span style="color: #A31515">&quot;Sergio&quot;</span><span style="color: #000000"> --title=</span><span style="color: #A31515">&quot;Yellow note&quot;</span>
-</code></pre>
+					<li><p><em>Ejemplo ejecución:</em>*
+						<img src="media/Pruebaejercicio2.png" alt="Prueba"></p>
 					</li>
 				</ul>
-				<p><strong>4. Todos los mensajes informativos se mostrarán con color verde, mientras que los mensajes de error se mostrarán con color rojo.</strong><br>Para cumplir con este requisito se han definido dos constantes globales, haciendo uso de <code>chalk</code>.</p>
-				<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">error</span><span style="color: #000000"> = </span><span style="color: #001080">chalk</span><span style="color: #000000">.</span><span style="color: #001080">bold</span><span style="color: #000000">.</span><span style="color: #001080">red</span><span style="color: #000000">;</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">informative</span><span style="color: #000000"> = </span><span style="color: #001080">chalk</span><span style="color: #000000">.</span><span style="color: #001080">bold</span><span style="color: #000000">.</span><span style="color: #001080">green</span><span style="color: #000000">;</span>
-</code></pre>
-				<p>Mediante chalk establecemos que la constante <code>error</code> y <code>informative</code> deben usarse de la siguiente manera para establecer el color de la salida por pantalla.</p>
-				<pre><code class="language-typescript"><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">error</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Note title taken!&#039;</span><span style="color: #000000">)); </span><span style="color: #008000">// Muestra el mensaje en negrita y roja</span>
-<span style="color: #000000"> </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">informative</span><span style="color: #000000">(</span><span style="color: #A31515">`New note added in </span><span style="color: #0000FF">${</span><span style="color: #001080">user</span><span style="color: #0000FF">}</span><span style="color: #A31515">!`</span><span style="color: #000000">)); </span><span style="color: #008000">// Muestra el mensaje en negrita y verde</span>
-</code></pre>
-				<a href="#ejemplo-de-uso-de-la-aplicación" id="ejemplo-de-uso-de-la-aplicación" style="color: inherit; text-decoration: none;">
-					<h1>Ejemplo de uso de la aplicación</h1>
+				<a href="#ejercicio-3" id="ejercicio-3" style="color: inherit; text-decoration: none;">
+					<h2><a href="src/ejercicio3/">Ejercicio 3</a></h2>
 				</a>
-				<p><img src="media/EjemploUso.png" alt="Ejemplo uso">  </p>
-				<a href="#bibliografía" id="bibliografía" style="color: inherit; text-decoration: none;">
-					<h1>Bibliografía</h1>
-				</a>
+				<p>En este tercer ejercicio se nos solicita desarrollar una aplicación que reciba desde línea de parámetros el nombre de un usuario y la ruta donde guarda sus notas.
+				Para realizar este paso se ha hecho uso de <code>yargs</code> mediante el cual se ha creado el comando <code>app</code> al cual se le debe pasar como parámetros el usuario y la ruta, un ejemplo podría ser el siguiente: </p>
+				<pre><code class="language-bash"><span style="color: #000000">node dist/ejercicio3/appNotes9.js app --user=</span><span style="color: #A31515">&quot;sergio&quot;</span><span style="color: #000000"> --path=</span><span style="color: #A31515">&quot;Notes&quot;</span>
+</code></pre>
+				<p>Tras la ejecución del comando anterior el programa muestra un mensaje por consola (<code>Listening to changes in file --&gt; Notes</code>), es en este punto donde entra en juego la función <code>watcher(path: string, user:string)</code> la se encarga de comprobar si la ruta pasada es accesible mediante <code>access</code>, si esta se verifica y es accesible hace uso de la función <code>fs.watch(pathUser, &#39;utf-8&#39;, (eventType, filename) =&gt; {...})</code> la cual es la encargada de escuchar y detectar todos los posibles cambios que se generen en el directorio de dicho usuario. Esta app es capaz de detectar tres tipos de cambios: </p>
 				<ul>
-					<li><a href="https://sonarcloud.io/projects">Sonar Cloud</a></li>
-					<li><a href="https://nodejs.org/es/">Node.js</a></li>
-					<li><a href="https://nodejs.org/dist/latest-v16.x/docs/api/fs.html">File system Node.js</a></li>
-					<li><a href="https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-patterns.html#singleton">Apuntes patrones de diseño</a></li>
+					<li><strong>Añadir una nota</strong></li>
+					<li><strong>Eliminar una nota</strong></li>
+					<li><strong>Modificar una nota</strong></li>
+				</ul>
+				<p><strong>Ejemplo de ejecución:</strong>
+				<img src="media/Ejercicio3.png" alt="Ejercicio3">  </p>
+				<a href="#ejercicio-4" id="ejercicio-4" style="color: inherit; text-decoration: none;">
+					<h2><a href="src/ejercicio4/">Ejercicio 4</a></h2>
+				</a>
+				<p>En este último ejercicio se pide desarrollar una aplicación que permita hacer de wrapper de los distintos comandos empleados en linux para el manejo de ficheros y directorios. Esta aplicación debe cumplir con las siguientes condiciones:
+					<strong>1. Dada una ruta concreta, mostrar si es un directorio o un fichero.</strong>
+				Comando:</p>
+				<pre><code class="language-bash"><span style="color: #000000">node dist/ejercicio4/index.js check --ruta=</span><span style="color: #A31515">&quot;./Prueba&quot;</span>
+</code></pre>
+				<p>  Este invocará a una función también llamada <code>check(ruta: string)</code> la cual mediante el uso de <code>fs.lstat(path, (err, stats) =&gt; {}</code> determinará haciendo uso del <code>stats.isDirectory()</code> o <code>stats.isFile()</code> si la ruta pasada corresponde a un fichero o un directorio.</p>
+				<p><strong>2. Crear un nuevo directorio a partir de una nueva ruta que recibe como parámetro.</strong>
+				Comando:</p>
+				<pre><code class="language-bash"><span style="color: #000000">node dist/ejercicio4/index.js mkdir --ruta=</span><span style="color: #A31515">&quot;./Prueba/sergio/&quot;</span>
+</code></pre>
+				<p>  Este invocará a la función <code>mkdir(path: string)</code> la cual se encarga de generar el directorio mediante <code>fs.mkdir(path, {recursive: true}, (err) =&gt; {...}</code></p>
+				<p><strong>3. Listar los ficheros dentro de un directorio.</strong><br>  Comando: </p>
+				<pre><code class="language-bash"><span style="color: #000000">node dist/ejercicio4/index.js ls --ruta=</span><span style="color: #A31515">&quot;./Prueba/sergio/&quot;</span>
+</code></pre>
+				<p>  Este invocará a la función <code>list(path: string)</code> la cual se encarga leer el directorio y mostrarlo listando cada uno de los ficheros que hay dentro de un directorio mediante <code>fs.readdir(path, (err, buffer) =&gt; {...}</code>.</p>
+				<p><strong>4. Mostrar el contenido de un fichero</strong>
+				Comando: </p>
+				<pre><code class="language-bash"><span style="color: #000000">node dist/ejercicio4/index.js cat --ruta=</span><span style="color: #A31515">&quot;./Prueba/sergio/hello.json&quot;</span>
+</code></pre>
+				<p>  Este invocará a la función <code>cat(path: string)</code> la cual se encgar de leer y mostrar el contenido de un fichero mediante <code>fs.readFilepath, (err, buffer) =&gt; {...}</code>.</p>
+				<p><strong>5. Borrar ficheros y directorios.</strong>
+				Comando: </p>
+				<pre><code class="language-bash"><span style="color: #000000">node dist/ejercicio4/index.js rm --ruta=</span><span style="color: #A31515">&quot;./Prueba/sergio/hello.json&quot;</span>
+</code></pre>
+				<p>  Este invocará a la función <code>rm(path:string)</code> la cual comprueba si la ruta se corresponde con un fichero o con un directorio, y dependiendo del tipo se aplica un tipo de borrado u otro. Para un directorio se hace uso de <code>fs.rmdir(path, {recursive: true}, (err) =&gt; {...}</code> mientras que para un fichero <code>fs.unlink(path, (err) =&gt; {...}</code>  </p>
+				<p><strong>6. Mover y copiar ficheros y/o directorios de una ruta a otra.</strong>
+				Comando: </p>
+				<pre><code class="language-bash"><span style="color: #000000">node dist/ejercicio4/index.js move --origen=</span><span style="color: #A31515">&quot;./Prueba/sergio/&quot;</span><span style="color: #000000"> --destino=</span><span style="color: #A31515">&quot;./Prueba/pepe/&quot;</span>
+</code></pre>
+				<p>  Este comando invocará a la función <code>move(origen:string, destino: string) {...}</code> la cual comprueba si el fichero o directorio a mover existe y si existe, mediante la creación de procesos que nos ofrece node.js, se ha creado un proceso encargado de ejecutar el comando <code>cp -r origen destino</code> mediante el uso de <code>spawn</code> la cual devuelve un objeto <code>ChildProcess</code>, y a continuación se redirige la salida estándar del <code>cp</code> a la salida principal de nuestro programa haciendo uso de <code>pipe</code>.</p>
+				<p><strong>Ejemplo de ejecución:</strong><br><img src="media/Ejercicio4.png" alt="Ejercicio4">  </p>
+				<ul>
+					<li>Contenido directorio <code>Prueba</code> tras la prueba realizada en el ejemplo anterior:<br><img src="media/Ejercicio4-2.png" alt="Prueba">  </li>
 				</ul>
 			</div>
 		</div>
@@ -172,13 +200,31 @@
 						<a href="modules.html">Modules</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/app.html">app</a>
+						<a href="modules/ejercicio2.html">ejercicio2</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/note.html">note</a>
+						<a href="modules/ejercicio2_app.html">ejercicio2/app</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/types.html">types</a>
+						<a href="modules/ejercicio3_app.html">ejercicio3/app</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/ejercicio3_appnotes9.html">ejercicio3/app<wbr>Notes9</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/ejercicio3_note.html">ejercicio3/note</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/ejercicio3_types.html">ejercicio3/types</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/ejercicio3_watcher.html">ejercicio3/watcher</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/ejercicio4.html">ejercicio4</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/ejercicio4_appwrapper.html">ejercicio4/app<wbr>Wrapper</a>
 					</li>
 				</ul>
 			</nav>
@@ -194,6 +240,7 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 			</ul>
 			<ul class="tsd-legend">

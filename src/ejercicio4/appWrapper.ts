@@ -1,5 +1,4 @@
 import * as fs from 'fs';
-import * as x from 'fs-extra';
 import { spawn } from 'child_process';
 
 /**
