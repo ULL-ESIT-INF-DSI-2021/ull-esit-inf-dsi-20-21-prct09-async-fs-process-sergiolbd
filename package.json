@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc-watch --onSuccess \"node dist/index.js\"",
+    "start": "tsc-watch --onSuccess \"node dist/ejercicio1.js helloworld.txt\"",
     "doc": "typedoc",
     "test": "mocha",
     "coverage": "nyc npm test && nyc report --reporter=lcov"
@@ -14,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.2.16",
+    "@types/fs-extra": "^9.0.11",
     "@types/lowdb": "^1.0.9",
     "@types/mocha": "^8.2.2",
     "@types/node": "^14.14.41",
@@ -34,6 +35,7 @@
     "@types/chalk": "^2.2.0",
     "chalk": "^4.1.1",
     "enquirer": "^2.3.6",
+    "fs-extra": "^9.1.0",
     "lowdb": "^1.0.0",
     "yargs": "^16.2.0"
   }
